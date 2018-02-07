@@ -1,4 +1,4 @@
-LAYOUT="github"
+LAYOUT="markedapp-byword"
 SOURCE_NAME=script
 SOURCE_FILE=./$(SOURCE_NAME).md
 OUTPUT_NAME=./script_web

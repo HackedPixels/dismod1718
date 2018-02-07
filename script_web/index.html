@@ -1,26 +1,269 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>DisMod Learning Guide</title>
-    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
-    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
-    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="assets/style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/pilcrow.css" />
+    <link type="text/css" rel="stylesheet" href="assets/hljs-github.min.css"/>
   </head>
-  <body>
-    <article class="markdown-body"><h1 id="dismod-learning-guide"><a class="header-link" href="#dismod-learning-guide"></a>DisMod Learning Guide</h1>
+<body><h1 id="dismod-learning-guide"><a class="header-link" href="#dismod-learning-guide"></a>DisMod Learning Guide</h1>
+<ul class="list">
+<li>TODO (<strong>&#10003;</strong> = <strong>done</strong>, <strong>&#128736;</strong> = <strong>in progress</strong>):<ul class="list">
+<li>Add examples <strong>&#128736;</strong></li>
+<li>Finish Mengen</li>
+<li><del>Add Potenzmengen</del> <strong>&#10003;</strong></li>
+<li>Finish Logik</li>
+<li><del>Add &#8872; definition</del> <strong>&#10003;</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
 <p><strong>Mengen</strong></p>
+<p><em>Operationen auf zwei Mengen:</em></p>
 <ul class="list">
 <li>Teilmenge: Menge, die gleich ein oder ein Teil, einer anderen Menge ist. (<strong>&sube;</strong>)</li>
 <li>Echte Teilmenge: Menge, die ein Teil einer anderen Menge ist <strong>nicht gleich!</strong> (<strong>&sub;</strong>)</li>
 <li>Vereinigung: Summe zweier Mengen (<strong>&cup;</strong>)</li>
 <li>Komplement (<em>Differenz</em>) Differenz zweier Mengen (<strong>\</strong>)<ul class="list">
-<li><em>Menge <strong>A</strong></em> - <em>Menge <strong>B</strong></em></li>
+<li><blockquote>
+<p><em>Menge <strong>A</strong></em> - <em>Menge <strong>B</strong></em> = <em>Menge <strong>C</strong></em></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>Schnittmenge: Menge identischer Elemente aus <strong>A</strong> und <strong>B</strong> (<strong>&cap;</strong>)<ul class="list">
+<li><blockquote>
+<p><em>Menge <strong>A</strong></em> &cap; <em>Menge <strong>B</strong></em> = <em>Menge <strong>C</strong></em></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>Symetrische Differenz (<em>XOR</em>): Menge unterschiedlicher Elemente aus <strong>A</strong> und <strong>B</strong> (&Delta;)<ul class="list">
+<li><blockquote>
+<p><em>Menge <strong>A</strong></em> &Delta; <em>Menge <strong>B</strong></em> = <em>Menge <strong>C</strong></em></p>
+</blockquote>
+</li>
 </ul>
 </li>
 </ul>
+<p><em>Operationen auf eine Menge</em>:</p>
+<ul class="list">
+<li>Potenzmenge: Menge aller möglichen Kombinationen einer Menge.<ul class="list">
+<li><blockquote>
+<p><strong>!</strong>Die leere menge ist Bestandteil jeder Menge.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>Operatoren</em>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Symbol</th>
+<th style="text-align:left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&sube;</td>
+<td style="text-align:left">Teilmenge</td>
+</tr>
+<tr>
+<td style="text-align:center">&sub;</td>
+<td style="text-align:left">Echte Teilmenge</td>
+</tr>
+<tr>
+<td style="text-align:center">&cup;</td>
+<td style="text-align:left">Vereinigung</td>
+</tr>
+<tr>
+<td style="text-align:center">\</td>
+<td style="text-align:left">Differenz</td>
+</tr>
+<tr>
+<td style="text-align:center">&cap;</td>
+<td style="text-align:left">Schnittmenge</td>
+</tr>
+<tr>
+<td style="text-align:center">&Delta;</td>
+<td style="text-align:left">Symetrische Differenz</td>
+</tr>
+<tr>
+<td style="text-align:center">&#120031;(X)</td>
+<td style="text-align:left">Potenzmenge</td>
+</tr>
+</tbody>
+</table>
+<p><em>Besondere Zeichen</em>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Name</th>
+<th style="text-align:left">Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">P</td>
+<td style="text-align:left">Menge aller verwendeten Elemente</td>
+</tr>
+</tbody>
+</table>
+<hr>
 <p><strong>Logik</strong></p>
-    </article>
-  </body>
+<p><em>Junktoren</em>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Symbol</th>
+<th style="text-align:left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&rarr;</td>
+<td style="text-align:left"><a href="#specialimpl">Implikation</a></td>
+</tr>
+<tr>
+<td style="text-align:center">&harr;</td>
+<td style="text-align:left"><a href="#biimpl">Logische Äquivalenz</a></td>
+</tr>
+<tr>
+<td style="text-align:center">&and;</td>
+<td style="text-align:left">Und</td>
+</tr>
+<tr>
+<td style="text-align:center">&or;</td>
+<td style="text-align:left">Oder</td>
+</tr>
+<tr>
+<td style="text-align:center">&oplus;</td>
+<td style="text-align:left">Exclusives Oder</td>
+</tr>
+<tr>
+<td style="text-align:center">&not;</td>
+<td style="text-align:left">Nicht</td>
+</tr>
+<tr>
+<td style="text-align:center">&#8872;</td>
+<td style="text-align:left"><a href="#semantic">Semantische Folgerung</a></td>
+</tr>
+<tr>
+<td style="text-align:center">&equiv;</td>
+<td style="text-align:left"><a href="#semanticequ">Sematische Equivalenz</a></td>
+</tr>
+</tbody>
+</table>
+<p><a name="semantic"></a></p>
+<table>
+<thead>
+<tr>
+<th><code>Semantische Folgerung</code>:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wenn a &#8872; b gilt (<em>für jede Belegung <strong>&#120069;</strong></em>):</br>+ &#120069;(a) = 1 <strong>dann</strong> &#120069;(b) = 1</br>+ &#10132; Alle Belegungungen die <strong>a</strong> erfüllen, erfüllen auch <strong>b</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="semanticequ"></a></p>
+<table>
+<thead>
+<tr>
+<th><code>Semantische Äquivalenz</code>:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(<strong>a</strong> &#8872; <strong>b</strong>) <em>und</em> (<strong>b</strong> &#8872; <strong>a</strong>) &harr; a</br></td>
+</tr>
+</tbody>
+</table>
+<p><a name="specialimpl"></a></p>
+<table>
+<thead>
+<tr>
+<th><code>Implikation</code>:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><table><tr><th>a</th><th>b</th><th>a &rarr; b</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>1</td></tr><tr><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table></td>
+</tr>
+<tr>
+<td>Die Implikation kann nur falsch sein, wenn etwas falsches aus</br>etwas warem gefolgert wird.</td>
+</tr>
+</tbody>
+</table>
+<p><a name="biimpl"></a>
+<code>Logische Äquivalenz</code>:</p>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th style="text-align:left">a &harr; b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td style="text-align:left">1</td>
+</tr>
+</tbody>
+</table>
+<p><a name="and"></a>
+<code>Und Verknüpfung</code>:</p>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th style="text-align:left">a &and; b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td style="text-align:left">1</td>
+</tr>
+</tbody>
+</table>
+</body>
 </html>
