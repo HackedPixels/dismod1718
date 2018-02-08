@@ -141,6 +141,23 @@ Besitzt ein Graph ein Dreieck, so gibt es mindestens drei unterschiedliche Farbe
 ### Page Rank
 
 _Peer-Review_: Gerichteter Graph, jeder Knoten gibt einen Teil seines Ranks an die Knoten ab, auf die er zeigt. Page Rank (PR) von Knoten j setzt sich zusammen aus:
-<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><msub><mi>R</mi><mi>j</mi></msub><mo>&#xA0;</mo><mo>=</mo><mstyle displaystyle="false"><munder><mo>&#x2211;</mo><mrow><mi>i</mi><mo>&#x2208;</mo><mi>V</mi><mi>O</mi><msub><mi>R</mi><mrow><mi>W</mi><mi>E</mi><mi>B</mi></mrow></msub><mo>(</mo><mi>j</mi><mo>)</mo></mrow></munder></mstyle><mfrac><mrow><mi>P</mi><msub><mi>R</mi><mi>i</mi></msub></mrow><msub><mi>a</mi><mi>i</mi></msub></mfrac><mo>&#xA0;</mo><mi>m</mi><mi>i</mi><mi>t</mi><mo>&#xA0;</mo><mi>P</mi><msub><mi>R</mi><mi>j</mi></msub><mo>&#xA0;</mo><mo>&gt;</mo><mo>=</mo><mn>0</mn></math>
+> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><msub><mi>R</mi><mi>j</mi></msub><mo>&#xA0;</mo><mo>=</mo><mstyle displaystyle="false"><munder><mo>&#x2211;</mo><mrow><mi>i</mi><mo>&#x2208;</mo><mi>V</mi><mi>O</mi><msub><mi>R</mi><mrow><mi>W</mi><mi>E</mi><mi>B</mi></mrow></msub><mo>(</mo><mi>j</mi><mo>)</mo></mrow></munder></mstyle><mfrac><mrow><mi>P</mi><msub><mi>R</mi><mi>i</mi></msub></mrow><msub><mi>a</mi><mi>i</mi></msub></mfrac><mo>&#xA0;</mo><mi>m</mi><mi>i</mi><mi>t</mi><mo>&#xA0;</mo><mi>P</mi><msub><mi>R</mi><mi>j</mi></msub><mo>&#xA0;</mo><mo>&gt;</mo><mo>=</mo><mn>0</mn></math>
 
 PR<sub>i</sub> ist der PR von Knoten i und a<sub>i</sub> ist der Aus-Grad von i (die Zahl der Kanten, die von i ausgehen; 3 ausgehende Kanten &#10132; i gibt <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>1</mn><mn>3</mn></mfrac></math> seines PR an jeden Knoten auf den er zeigt.)
+
+_D&#228;mpfungsfaktor_: Wahrscheinlichkeit von einem Knoten des Graphen in einem beliebigen anderen Knoten zu springen. Wird verwendetet um eine Ballung von PR zu vermeiden, wenn einzelne Knoten eines Graphen PR nicht an Gesamtgraphen zur&#252;ckgeben (PR "flie&#223;t" von einem Teil des Graphen in einen anderen, aber nicht zur&#252;ck).
+
+_PR berechnen_: PR wird mithilfe des D&#228;mpfungsfaktors d, den Eigenschaften von Graph G und der Gleichung (siehe unten) berechnet:
+> <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><msub><mi>R</mi><mi>j</mi></msub><mo>&#xA0;</mo><mo>=</mo><mfrac><mrow><mn>1</mn><mo>-</mo><mi>d</mi></mrow><mi>n</mi></mfrac><mo>+</mo><mi>d</mi><mo>&#xA0;</mo><mo>\*</mo><mstyle displaystyle="false"><munder><mo>&#x2211;</mo><mrow><mi>i</mi><mo>&#x2208;</mo><mi>V</mi><mi>O</mi><msub><mi>R</mi><mrow><mi>W</mi><mi>E</mi><mi>B</mi></mrow></msub><mo>(</mo><mi>j</mi><mo>)</mo></mrow></munder></mstyle><mfrac><mrow><mi>P</mi><msub><mi>R</mi><mi>i</mi></msub></mrow><msub><mi>a</mi><mi>i</mi></msub></mfrac><mo>&#xA0;</mo><mi>m</mi><mi>i</mi><mi>t</mi><mo>&#xA0;</mo><mi>P</mi><msub><mi>R</mi><mi>j</mi></msub><mo>&#xA0;</mo><mo>&gt;</mo><mo>=</mo><mn>0</mn></math>
+
+Hierbei ist n Gesamtzahl der Knoten in G.
+
+Um den PR f&#252;r jeden Knoten zu bestimmen, wird die PR Gleichung f&#252;r jeden Knoten aufgestellt und nach <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mrow><mn>1</mn><mo>-</mo><mi>d</mi></mrow><mi>n</mi></mfrac></math> aufgelöst. Dann kann das Gauß-Verfahren angewendet werden, um die einzelnen PR zu bestimmen.
+
+Page Rank Matrix: Erstelle eine Matrix für den **WEB** Graphen G (ein gerichteter Graph) mittels der Gleichung:
+
+
+> <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>p</mi><mrow><mi>i</mi><mo>,</mo><mo>&#xA0;</mo><mi>j</mi></mrow></msub><mo>:</mo><mo>=</mo><mfenced open="{" close=""><mtable columnalign="left"><mtr><mtd><mfrac><mrow><mn>1</mn><mo>-</mo><mi>d</mi></mrow><mi>n</mi></mfrac><mo>+</mo><mfrac><mi>d</mi><msub><mi>a</mi><mi>i</mi></msub></mfrac><mo>&#xA0;</mo><mtext>falls&#xA0;</mtext><mo>(</mo><mi>i</mi><mo>,</mo><mo>&#xA0;</mo><mi>j</mi><mo>)</mo><mo>&#x2208;</mo><mi>E</mi><mo>,</mo></mtd></mtr><mtr><mtd><mfrac><mrow><mn>1</mn><mo>-</mo><mi>d</mi></mrow><mi>n</mi></mfrac><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mo>&#xA0;</mo><mtext>falls</mtext><mo>&#xA0;</mo><mo>(</mo><mi>i</mi><mo>,</mo><mo>&#xA0;</mo><mi>j</mi><mo>)</mo><mo>&#xA0;</mo><mo>&#x2209;</mo><mi>E</mi></mtd></mtr></mtable></mfenced></math>
+
+i und j sind die Knoten im Graphen, bzw. die Zeilen (i) und Spalten (j) der Matrix. Der untere Fall mit
+> (i, j) &notin; E
