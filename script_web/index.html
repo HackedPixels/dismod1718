@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>DisMod Learning Guide</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="text/css" rel="stylesheet" href="assets/style.css" />
-    <link type="text/css" rel="stylesheet" href="assets/pilcrow.css" />
-    <link type="text/css" rel="stylesheet" href="assets/hljs-github.min.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
   </head>
-<body><h1 id="dismod-learning-guide"><a class="header-link" href="#dismod-learning-guide"></a>DisMod Learning Guide</h1>
+  <body>
+    <article class="markdown-body"><h1 id="dismod-learning-guide"><a class="header-link" href="#dismod-learning-guide"></a>DisMod Learning Guide</h1>
+<p>&#128587; (fast) alles für die Dismod Klausur</p>
 <ul class="list">
 <li>TODO (<strong>&#10003;</strong> = <strong>done</strong>, <strong>&#128736;</strong> = <strong>in progress</strong>):<ul class="list">
 <li>Add examples <strong>&#128736;</strong></li>
@@ -16,11 +18,13 @@
 <li><del>Add Potenzmengen</del> <strong>&#10003;</strong></li>
 <li>Finish Logik</li>
 <li><del>Add &#8872; definition</del> <strong>&#10003;</strong></li>
+<li>Convert Umlauts to HTML Code.</li>
+<li>Finish Page Rank <strong>&#128736;</strong></li>
 </ul>
 </li>
 </ul>
 <hr>
-<p><strong>Mengen</strong></p>
+<h3 id="mengen"><a class="header-link" href="#mengen"></a>Mengen</h3>
 <p><em>Operationen auf zwei Mengen:</em></p>
 <ul class="list">
 <li>Teilmenge: Menge, die gleich ein oder ein Teil, einer anderen Menge ist. (<strong>&sube;</strong>)</li>
@@ -52,7 +56,7 @@
 <ul class="list">
 <li>Potenzmenge: Menge aller möglichen Kombinationen einer Menge.<ul class="list">
 <li><blockquote>
-<p><strong>!</strong>Die leere menge ist Bestandteil jeder Menge.</p>
+<p><strong>&#9888;</strong> Die leere Menge ist Bestandteil jeder Menge.</p>
 </blockquote>
 </li>
 </ul>
@@ -113,7 +117,7 @@
 </tbody>
 </table>
 <hr>
-<p><strong>Logik</strong></p>
+<h3 id="logik"><a class="header-link" href="#logik"></a>Logik</h3>
 <p><em>Junktoren</em>:</p>
 <table>
 <thead>
@@ -129,7 +133,7 @@
 </tr>
 <tr>
 <td style="text-align:center">&harr;</td>
-<td style="text-align:left"><a href="#biimpl">Logische Äquivalenz</a></td>
+<td style="text-align:left"><a href="#biimpl">Logische &#192;quivalenz</a></td>
 </tr>
 <tr>
 <td style="text-align:center">&and;</td>
@@ -166,7 +170,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Wenn a &#8872; b gilt (<em>für jede Belegung <strong>&#120069;</strong></em>):</br>+ &#120069;(a) = 1 <strong>dann</strong> &#120069;(b) = 1</br>+ &#10132; Alle Belegungungen die <strong>a</strong> erfüllen, erfüllen auch <strong>b</strong>.</td>
+<td>Wenn a &#8872; b gilt (<em>für jede Belegung <strong>&#120069;</strong></em>):</br>+ &#120069;(a) = 1 <strong>dann</strong> &#120069;(b) = 1</br>+ &#10132; Alle Belegungungen die <strong>a</strong> erf&#252;llen, erf&#252;llen auch <strong>b</strong>.</td>
 </tr>
 </tbody>
 </table>
@@ -199,41 +203,20 @@
 </tr>
 </tbody>
 </table>
-<p><a name="biimpl"></a>
-<code>Logische Äquivalenz</code>:</p>
+<p><a name="biimpl"></a></p>
 <table>
 <thead>
 <tr>
-<th>a</th>
-<th>b</th>
-<th style="text-align:left">a &harr; b</th>
+<th><code>Logische Äquivalenz</code>:</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>0</td>
-<td style="text-align:left">1</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td style="text-align:left">0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>0</td>
-<td style="text-align:left">0</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td style="text-align:left">1</td>
+<td><table><tr><th>a</th><th>b</th><th>a &harr; b</th></tr><tr><td>0</td><td>0</td><td>1</td></tr><tr><td>0</td><td>1</td><td>0</td></tr><tr><td>1</td><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td><td>1</td></tr></table></td>
 </tr>
 </tbody>
 </table>
-<p><a name="and"></a>
-<code>Und Verknüpfung</code>:</p>
+<p><a name="and"></a></p>
 <table>
 <thead>
 <tr>
@@ -265,5 +248,38 @@
 </tr>
 </tbody>
 </table>
-</body>
+<hr>
+<h3 id="graphen"><a class="header-link" href="#graphen"></a>Graphen</h3>
+<p><em>Graph</em>: Menge an Knoten V, die &#252;ber Menge von Kanten E, miteinander verbunden sind G(V, E)</p>
+<p><em>Komplement&#228;rgraph</em>: Komplement&#228;rgraph (Konfliktgraph) G&#773;, hat alle Knoten V, &#252;ber die Kanten E&#773; verbunden. (Kanten, die nicht in G vorliegen.)</p>
+<blockquote>
+<p>&#9888; E&#773; kein offizieller Ausdruck.</p>
+</blockquote>
+<p><em>Grad</em>: Der Grad eines Knotens beschreibt über wie viele Kanten er mit beliebigen Knoten verbunden ist (zwei Kanten &#10132; Grad 2). Grad <em>x</em> eines Graphen sagt aus, dass all seine Knoten über<em>x</em> Kanten miteinander verbunden sind.</p>
+<hr>
+<p><em>Euler Wege</em>: Kantenfolge in einem Graphen G, die <strong>jede</strong> Kante genau einmal enth&#228;lt (Start- und Endknoten m&#252;ssen hier nicht identisch sein).</p>
+<p><em>Euler Kreise</em>: Kantenfolge in einem Graph G, die <strong>jede</strong> Kante genau einmal enth&#228;lt und zus&#228;tzlich am Anfangsknoten endet (Start- und Endknoten m&#252;ssen identisch sein)</p>
+<hr>
+<p><em>Hamilton Weg</em>: Kantenfolge in einem Graphen G, die <strong>jede</strong> Kante genau einmal enth&#228;lt (Start- und Endknoten m&#252;ssen hier nicht identisch sein)</p>
+<p><em>Hamilton Kreis</em>: Kantenfolge in einem Graphen G, die <strong>jeden</strong> Knoten genau einmal durchl&#228;uft und am Anfangsknoten endet (Start- und Endknoten m&#252;ssen identisch sein)</p>
+<hr>
+<p><em>Zusammenhangskomponente</em>: Die Zusammenhangskomponente eines Knotens V (in einem <strong>ungerichteten</strong> Graphen G), besteht aus allen Knoten W, die durch beliebige Wege von V aus erreicht werden k&#246;nnen.</p>
+<p><em>Starke Zusammenhangskomponente</em>: Ist der Graph G gerichtet, so besteht die starke Zusammenhangskomponente eines Knoten V aus allen Knoten W, die von V aus erreicht werden k&#246;nnen (<strong>Hinweg von V nach W und Rückweg von W nach V sind m&#246;glich</strong>)</p>
+<hr>
+<p><em>Zusammenh&#228;ngend</em>: Ein Graph G hei&#223;t zusammenh&#228;ngend, wenn die Zusammenhangskomponente eines beliebigen Knotens V aus allen Knoten des Graphen G besteht (es existiert ein Knoten, von dem aus alle anderen Knoten erreicht werden k&#246;nnen).</p>
+<p><em>Stark Zusammenh&#228;ngend</em>: Ein gerichteter Graph G heißt stark zusammenh&#228;ngend, wenn die starke Zusammenhangskomponente eines beliebigen Knotens V aus allen Knoten des Graphen G besteht (es existiert ein Knoten, von dem aus alle anderen Knoten erreicht werden k&#246;nnen).</p>
+<p><em>Allg. Zusammenh&#228;ngend</em>: Jeder Knoten V in G kann jeden beliebigen anderen Knoten W erreichen.</p>
+<hr>
+<p><em>Knotenf&#228;rbung</em>: Jedem Knoten eines Graphen wird eine Farbe zugewiesen. Konflikte treten auf, wenn zwei miteinander verbundene Knote dieselbe Farbe haben (alle durch Kanten verbundene Knoten m&#252;ssen unterschiedliche Farben haben)</p>
+<hr>
+<p>Zusatz:
+Besitzt ein Graph ein Dreieck, so gibt es mindestens drei unterschiedliche Farben bei einer Knotenf&#228;rbung.</p>
+<hr>
+<h3 id="page-rank"><a class="header-link" href="#page-rank"></a>Page Rank</h3>
+<p><em>Peer-Review</em>: Gerichteter Graph, jeder Knoten gibt einen Teil seines Ranks an die Knoten ab, auf die er zeigt. Page Rank (PR) von Knoten j setzt sich zusammen aus:</p>
+<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>P</mi><msub><mi>R</mi><mi>j</mi></msub><mo>&#xA0;</mo><mo>=</mo><mstyle displaystyle="false"><munder><mo>&#x2211;</mo><mrow><mi>i</mi><mo>&#x2208;</mo><mi>V</mi><mi>O</mi><msub><mi>R</mi><mrow><mi>W</mi><mi>E</mi><mi>B</mi></mrow></msub><mo>(</mo><mi>j</mi><mo>)</mo></mrow></munder></mstyle><mfrac><mrow><mi>P</mi><msub><mi>R</mi><mi>i</mi></msub></mrow><msub><mi>a</mi><mi>i</mi></msub></mfrac><mo>&#xA0;</mo><mi>m</mi><mi>i</mi><mi>t</mi><mo>&#xA0;</mo><mi>P</mi><msub><mi>R</mi><mi>j</mi></msub><mo>&#xA0;</mo><mo>&gt;</mo><mo>=</mo><mn>0</mn></math>
+
+<p>PR<sub>i</sub> ist der PR von Knoten i und a<sub>i</sub> ist der Aus-Grad von i (die Zahl der Kanten, die von i ausgehen; 3 ausgehende Kanten &#10132; i gibt <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>1</mn><mn>3</mn></mfrac></math> seines PR an jeden Knoten auf den er zeigt.)</p>
+    </article>
+  </body>
 </html>
